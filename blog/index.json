@@ -1,0 +1,9 @@
+[
+    {
+        "ref": "https://leong.moe/blog/firefox-remove-unremovable-addons/",
+        "title": "Remove Unremovable Addons From Firefox",
+        "section": "blog",
+        "date" : "2019.09.08",
+        "body": " The Problem When installing certain software, an installer may choose to install browser extensions without the consent of the user. In my experience, one of the most egregious offenders is Adobe Acrobat.\nIn Google Chrome, it is easy enough to remove these offending extensions. Simply navigate to chrome://extensions and hit the Remove button on the undesirable extension.\nFirefox makes this process significantly more complicated. Some extensions lack the ability to be removed from within the browser\u0026rsquo;s interface. After navigating to about:addons and choosing the Extensions tab, clicking the triple dots will reveal that there is no option to remove the plugin.\nThe Solution It turns out that these unremovable addons are added into Firefox via the Windows Registry. To remove such an addon, open the Registry Editor, and navigate to:\nComputer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Mozilla\\Firefox\\Extensions  where you will see the following key:\nDeleting the offending registry key and restarting Firefox will result in the undesired extension being deleted. Enjoy your less-cluttered version of Firefox.\n"
+    }
+]

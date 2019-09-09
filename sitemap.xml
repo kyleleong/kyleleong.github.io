@@ -3,7 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://leong.moe/blog/</loc>
+    <lastmod>2019-09-08T15:50:51-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://leong.moe/</loc>
+    <lastmod>2019-09-08T15:50:51-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://leong.moe/blog/firefox-remove-unremovable-addons/</loc>
+    <lastmod>2019-09-08T15:50:51-07:00</lastmod>
   </url>
   
   <url>

@@ -6,9 +6,21 @@
     <description>Recent content on Kyle Leong</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 08 Sep 2019 15:50:51 -0700</lastBuildDate>
     
 	<atom:link href="https://leong.moe/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Remove Unremovable Addons From Firefox</title>
+      <link>https://leong.moe/blog/firefox-remove-unremovable-addons/</link>
+      <pubDate>Sun, 08 Sep 2019 15:50:51 -0700</pubDate>
+      
+      <guid>https://leong.moe/blog/firefox-remove-unremovable-addons/</guid>
+      <description>The Problem When installing certain software, an installer may choose to install browser extensions without the consent of the user. In my experience, one of the most egregious offenders is Adobe Acrobat.
+In Google Chrome, it is easy enough to remove these offending extensions. Simply navigate to chrome://extensions and hit the Remove button on the undesirable extension.
+Firefox makes this process significantly more complicated. Some extensions lack the ability to be removed from within the browser&amp;rsquo;s interface.</description>
+    </item>
     
   </channel>
 </rss>

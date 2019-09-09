@@ -685,9 +685,6 @@ const initUI=()=>{$('#searchBoxIcon').click(()=>{$('#searchBoxInput').val('')
 $('#searchBoxInput').trigger('keyup')})
 $('#searchBoxInput').keyup(event=>{const $searchResults=$('#searchResults')
 const query=$(event.currentTarget).val()
-if(query.length){$('#searchBoxIcon').attr('src','../img/clear.png')
-$('#searchBoxIcon').css('cursor','pointer')}else{$('#searchBoxIcon').attr('src','../img/search.png')
-$('#searchBoxIcon').css('cursor','default')}
 if(query.length<2){$searchResults.hide()
 return}
 renderResults(search(query))
@@ -698,7 +695,7 @@ const query=$('#searchBoxInput').val()
 const BODY_LENGTH=100
 const MAX_PAGES=10
 $searchResults.empty()
-if(!results.length){$searchResults.append('<div class="searchResultPage">No results found for query "'+query+'"</div>')
+if(!results.length){$searchResults.append('<div class="searchResultPage">No Results</div>')
 return}
 results.slice(0,MAX_PAGES).forEach((result,idx)=>{const $searchResultPage=$('<div class="searchResultPage">')
 const metadata=lunrResult[idx].matchData.metadata

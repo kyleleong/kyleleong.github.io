@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>
+      
+          Remove Unremovable Addons From Firefox - Kyle Leong
+      
+  </title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Kyle Leong" />
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="https://leong.moe/style.min.8bd9a5ed60226496fb5d14a149a17cb7b534df2b313e4dcf643292383f0faf7f.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  
+  
+
+  <meta property="og:title" content="Remove Unremovable Addons From Firefox" />
+<meta property="og:description" content="The Problem When installing certain software, an installer may choose to install browser extensions without the consent of the user. In my experience, one of the most egregious offenders is Adobe Acrobat.
+In Google Chrome, it is easy enough to remove these offending extensions. Simply navigate to chrome://extensions and hit the Remove button on the undesirable extension.
+Firefox makes this process significantly more complicated. Some extensions lack the ability to be removed from within the browser&rsquo;s interface." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://leong.moe/blog/firefox-remove-unremovable-addons/" />
+<meta property="article:published_time" content="2019-09-08T15:50:51-07:00" />
+<meta property="article:modified_time" content="2019-09-08T15:50:51-07:00" />
+<meta itemprop="name" content="Remove Unremovable Addons From Firefox">
+<meta itemprop="description" content="The Problem When installing certain software, an installer may choose to install browser extensions without the consent of the user. In my experience, one of the most egregious offenders is Adobe Acrobat.
+In Google Chrome, it is easy enough to remove these offending extensions. Simply navigate to chrome://extensions and hit the Remove button on the undesirable extension.
+Firefox makes this process significantly more complicated. Some extensions lack the ability to be removed from within the browser&rsquo;s interface.">
+
+
+<meta itemprop="datePublished" content="2019-09-08T15:50:51-07:00" />
+<meta itemprop="dateModified" content="2019-09-08T15:50:51-07:00" />
+<meta itemprop="wordCount" content="160">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Remove Unremovable Addons From Firefox"/>
+<meta name="twitter:description" content="The Problem When installing certain software, an installer may choose to install browser extensions without the consent of the user. In my experience, one of the most egregious offenders is Adobe Acrobat.
+In Google Chrome, it is easy enough to remove these offending extensions. Simply navigate to chrome://extensions and hit the Remove button on the undesirable extension.
+Firefox makes this process significantly more complicated. Some extensions lack the ability to be removed from within the browser&rsquo;s interface."/>
+
+  <!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+  <![endif]-->
+
+  <!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+  <![endif]-->
+
+  </head>
+
+  <body>
+    
+  <h1>Remove Unremovable Addons From Firefox</h1>
+  <header>
+  
+  <div class="avatar">
+    <img class="avatarMask" src="https://leong.moe//img/avatar.jpg">
+    
+  </div>
+  
+  <h2><a class="author" href="https://leong.moe/">Kyle Leong</a></h2>
+</header>
+
+  
+  
+  <p class="date">September 8, 2019</p>
+  
+  <div id="contentBody">
+    
+
+<h1 id="the-problem">The Problem</h1>
+
+<p>When installing certain software, an installer may choose to install browser
+extensions without the consent of the user. In my experience, one of the most
+egregious offenders is Adobe Acrobat.</p>
+
+<p>In Google Chrome, it is easy enough to remove these offending extensions. Simply
+navigate to <code>chrome://extensions</code> and hit the <strong>Remove</strong> button on the
+undesirable extension.</p>
+
+<p>Firefox makes this process significantly more complicated. Some extensions lack
+the ability to be removed from within the browser&rsquo;s interface. After navigating
+to <code>about:addons</code> and choosing the <strong>Extensions</strong> tab, clicking the triple dots
+will reveal that there is no option to remove the plugin.</p>
+
+<p><img src="/img/blog/firefox-unremovable-extension.png" alt="Unremovable Addon" /></p>
+
+<h1 id="the-solution">The Solution</h1>
+
+<p>It turns out that these unremovable addons are added into Firefox via the
+Windows Registry. To remove such an addon, open the Registry Editor, and
+navigate to:</p>
+
+<pre><code>Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\Extensions
+</code></pre>
+
+<p>where you will see the following key:</p>
+
+<p><img src="/img/blog/firefox-extension-registry.png" alt="Firefox Extension Registry Location" /></p>
+
+<p>Deleting the offending registry key and restarting Firefox will result in the
+undesired extension being deleted. Enjoy your less-cluttered version of Firefox.</p>
+
+  </div>
+  <footer>
+  <p>
+  &copy; 2019 Kyle Leong
+  </p>
+</footer>
+
+
+  </body>
+</html>
